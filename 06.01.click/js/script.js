@@ -1,5 +1,7 @@
 $(function () {
 
+// Events - like signals that something happened on the page and those signals are emitted when the user peforms an action. Ex) user clicks button which is fired by handled by some function. hover over items on page or press a key or moving an event. Register or login.
+
   // Click handler can be attached by passing a callback function to the click()
   // function. Whatever code you write into the callback function is then
   // executed whenever the user clicks the element.

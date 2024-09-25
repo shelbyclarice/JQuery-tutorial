@@ -44,3 +44,24 @@ $(function () {
   console.log(value);  // Peter Sommerhoff
 
 });
+
+$(function () {
+  // attr(), prop(), val()
+  var specialLink = $("special-link");
+  // print out the url into the console
+  console.log(specialLink.attr("href"));
+
+  // Project Structure link to will take to website
+  specialLink.attr("href", "https://petersommerhoff.com");
+
+  var checkbox = $("input:checkbox");
+  // Allows to be able to uncheck the checkbox vs .attr() which cannot uncheck it
+  console.log(checkbox.prop("checked"));
+
+  var textInput = $("input:text");
+  console.log(textInput.val());
+
+  // .val() will work with one element at a time
+  var rangeInput = $("input[type='range']");
+  console.log(rangeInput.val());
+});

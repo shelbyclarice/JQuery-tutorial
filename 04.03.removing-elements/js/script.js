@@ -16,3 +16,19 @@ $(function () {
   $("form").empty();
 
 });
+
+// Remove list from the page
+$(function () {
+  $("li").remove();
+  $("form").children().not("input:text, textarea, br").remove();
+
+  // When use detach instead, jquery will not forget the element compared to remove. Can repend the event later on
+  var detachedListItem = $("li").detach();
+  $("#content").append(detachedListItem);
+
+  // Removing elements from first paragraph which will include width,height, em, span, ect. but the p tag will still be there
+  $("p:first").empty();
+
+  // Removes text inside color boxes without removing element iteself
+  $(".red-box, .blue-box, .green-box").empty();
+});

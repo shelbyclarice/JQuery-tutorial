@@ -40,3 +40,17 @@ $(function () {
 function highlight(element) {
   element.css("background-color", "rgba(180, 180, 30, 0.8)");
 }
+
+$(function() {
+  $("#list").find("li").css("background-color", "rgba(180, 180, 10, 0.8)");
+  // Will find the direct children on the list
+  $("#list").children("li").css("background-color", "rgba(180, 180, 10, 0.8)");
+  // Selects the parents which selects most things but put in div which deselects the body
+  $("#list").parents("div").css("background-color", "rgba(180, 180, 10, 0.8)");
+  // Will select one parent and will use one element unless want the parent of the HTML tag
+  $("#list").parent().css("background-color", "rgba(180, 180, 10, 0.8)");
+  // Siblings are on the same level, can use ("header") which will select all headings h1-h6
+  $("#list").siblings().css("background-color", "rgba(180, 180, 10, 0.8)");
+  // Select before the list element and .next is the element that comes after the list
+  $("#list").prev().css("background-color", "rgba(180, 180, 10, 0.8)");
+});

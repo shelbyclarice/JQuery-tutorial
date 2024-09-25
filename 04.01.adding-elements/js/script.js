@@ -1,3 +1,5 @@
+// HTML DOM (Document Object Model)
+
 $(function () {
 
   // 1) Appending elements to existing elements.
@@ -40,5 +42,42 @@ $(function () {
   // original position).
   // In case it's added to multiple elements, jQuery must clone the added element.
   $("p:first").after($("#list"));
+
+});
+
+$(function() {
+  // Last subtitle
+  $("ul ul:first").append("<li>I'm gonna be the last sub-item");
+
+  // Another way to acheive the same effect
+  $("<li>I'm gonna be the last item</li>").appendTo($("ul ul:first"));
+
+  // First subtitle
+  $("ul ul:first").prepend("<li>I'm gonna be the last sub-item");
+
+  // Add for first subtitle for each main item
+  $("ul ul").prepend("<li>I'm gonna be the first sub-item");
+
+  // Another way to acheive the same effect with simpliar syntax
+  $("<li>I'm gonna be the first item</li>").prependTo("ul ul:first");
+
+  $("<h4>Peter Sommerhoff</h4>").prependTo("#content");
+
+  // Making another red box called sibling
+  //$(".red-box").after("<div class='red-box'>Another Red</div>");
+  // Making last child blue box
+  //$(".blue-box").before("<div class='blue-box'>Blue Friend</div>");
+
+  // Blue box 2 before the blue box using in function
+  //$(".blue-box").before(function() {
+    //return "<div class='blue-box'>Blue 2</div>";
+  //});
+
+  // Red box was originally to the left but is now in the middle, moving the element
+  // Can pass in a string, a function, or in an element right away
+  //$(".blue-box").before($(".red-box"));
+
+  $("p").after($("#list"));
+
 
 });

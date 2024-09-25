@@ -2,10 +2,12 @@ $(function () {
 
   // Additional CSS classes can be added to an element via addClass()
 
+  // Hover over link to have a line appear
   // For instance, add the class .fancy-link to all anchor tags.
   // Note that you *do not* add a dot in front of the class name here.
   $("a").addClass("fancy-link");
 
+  // Emphasize first paragraph with larger and gray italic
   // You can also add multiple classes at once.
   $("p:first").addClass("large emphasize");
 
@@ -33,4 +35,8 @@ $(function () {
   // To quickly toggle one particular CSS class, use toggleClass().
   $("li li:first").toggleClass("emphasize");
 
+});
+
+$(function () {
+  $(".dummy").removeClass("dummy").addClass("green-box");
 });

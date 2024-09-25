@@ -18,3 +18,26 @@ $(function () {
   $("li:first, li:last").replaceWith("<li>First or last list item</li>");
   
 });
+
+// Replacing elements on the page
+$(function () {
+  $("li").replaceWith("<li>Replaced.</li>");
+});
+
+// Achieve the same effect
+$(function () {
+  $("li").replaceWith(function() {
+    return "<li>Replaced with Function</li>"
+});
+
+// Replacing first paragraph, putting on top to replace the paragraph tag - not cloned
+var firstListItem = $("li:first");
+$("p:first").replaceWith(firstListItem);
+
+// Changing red and blue box to be green box
+$(".red-box, .blue-box").replaceWith("<div class='green-box'>More Green</div>");
+
+// Create same effect
+$("<div class='green-box'>More Green</div>").replaceAll(".red-box, .blue-box");
+});
+

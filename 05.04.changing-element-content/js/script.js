@@ -1,5 +1,7 @@
 $(function () {
 
+// text(), html()
+
   // 1) Pure text content: text()
 
   // To read or change the textual content of an element, you use text().
@@ -25,5 +27,8 @@ $(function () {
   // You can use this in a way that appends content to an element.
   p2.text(p2.text() + " This is an additional sentence.");
   p2.html(p2.html() + " <span class='emphasize'>And another emphasized one.</span>");
+
+
+  firstPar.html(firstPar.html() + "This was just appended.");
 
 });

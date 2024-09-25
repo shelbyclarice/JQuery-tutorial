@@ -49,3 +49,21 @@ $(function () {
 function highlight(element) {
   element.css("background-color", "rgba(180, 180, 30, 0.8)");
 }
+
+$(function() {
+  $("p").css("background-color", "rgba(180, 180, 30, 0.8)");
+  $(".red-box").css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("#list").css("background-color", "rgba(180, 180, 30, 0.8)");
+  // First input box will be highlighted
+  // input:email does not exist will not highlight the second box
+  $("input[type='text']").css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("h2, p, input").css("background-color", "rgba(180, 180, 30, 0.8)");
+  // First paragraph
+  $("p:first").css("background-color", "rgba(180, 180, 30, 0.8)");
+  // Last List item
+  $("p:last").css("background-color", "rgba(180, 180, 30, 0.8)");
+  // Number starts with 0 therefore the first one is selected then continues with even index
+  $("li:evens").css("background-color", "rgba(180, 180, 30, 0.8)");
+
+
+});

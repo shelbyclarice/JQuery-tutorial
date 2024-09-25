@@ -39,3 +39,28 @@ $(function () {
   });
 
 });
+
+$(function () {
+  $(".gallery").css("display", "none"); // .hide()
+
+  var redBox = $(".red-box");
+  console.log(redBox.css("width"));
+  console.log(redBox.width());
+
+  redBox.css("background-color", "#AA7700");
+  $("p").css("font-size", "18px");
+  redBox.css("width", "+_20px")
+
+  var properties = $("p").css(["font-size", "line-height", "color"]);
+  console.log(properties);
+  console.log("font-size");
+
+  // Can't select text
+  redBox.css("user-select", "none");
+  // Same way
+  redBox.css("user-select", function() {
+    return "none";
+  });
+
+  // JQuery will ignore !important like used in CSS
+});
