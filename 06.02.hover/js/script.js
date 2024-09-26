@@ -1,3 +1,4 @@
+
 $(function () {
 
   // Hover handlers are defined the same way as click handlers but using hover().

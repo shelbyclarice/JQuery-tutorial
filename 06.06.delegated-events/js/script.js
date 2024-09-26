@@ -19,4 +19,8 @@ $(function () {
 
   $("#list ul").append("<li>Dynamically added new item!</li>");
 
+  $("body").on("mouseenter", "li", function() {
+    $(this).css("color", "#666");
+  });
+
 });

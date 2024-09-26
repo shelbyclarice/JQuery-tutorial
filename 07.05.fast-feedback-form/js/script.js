@@ -1,9 +1,14 @@
 $(function () {
 
+
+var form = $("#form");
+enableFastFeedback(form);
+
   // When the submit event comes in, we first validate all form fields
   // and abort submission if one of them is invalid. Also, we highlight all
   // invalid fields so that the user knows what to fix.
-  $("#form").submit(function(event) {
+  // $("#form").submit(function(event) {
+  form.submit(function(event) {
     // First, read out all entered values.
     var name = $("#name").val();
     var password = $("#password").val();

@@ -4,6 +4,8 @@ $(function () {
   // using jQuery's on() function.
   // For instance, the following logs to the console whenever you click anywhere
   // on the page or press any key while the page/browser is focused.
+
+  // .on("click", function() { ... })
   $("html").on("click keydown", function() {
     console.log("Mouse was clicked or key was pressed.");
   });

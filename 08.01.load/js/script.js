@@ -1,5 +1,8 @@
 $(function () {
 
+
+  // $.get(), $.post(), $.ajax(), $.getJSON()
+  
   // You can load files from the server (or local file system in this case) with
   // jQuery using its load() function.
   $("#code").load("js/script.js");

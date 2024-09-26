@@ -11,6 +11,9 @@ $(function () {
     $(this).stop().fadeTo(500, 1);
   });
 
+
+  // hover(handlerIn, handlerOut)
+  blueBox.hover(function() {}, function() {});
   // However, you can achieve the same with hover() as well. For this, you must
   // pass in two callback functions: first the one for mouseenter, then the one
   // for mouseleave.
